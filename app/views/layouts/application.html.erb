@@ -13,16 +13,20 @@
 		<div class="container">
 			<a class="brand" href="#">Sankofabook</a>
 			<ul class="nav">
+				<%= link_to "sign out", destroy_user_session_path, method: :delete %>
 				<li><%= link_to "status", statuses_path %></li>
 		</div>
 	</div>
 </div>
 		<div class="container">
    
- 
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
 
 <%= yield %>
 <em>Footer</em>
+<%= render "layouts/footer" %>
 </div>
 
 </body>
